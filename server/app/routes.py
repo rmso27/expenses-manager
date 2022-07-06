@@ -6,6 +6,9 @@ from flask_cors import CORS, cross_origin
 from app import app
 import configparser
 
+# Import functions from "functions.py" file
+from .functions import get_db_status
+
 ## MAIN VARS ##
 
 cors = CORS(app)
@@ -17,11 +20,22 @@ config.read('configs/configs.ini')
 
 ## ROUTES ##
 
-# Test route
-@app.route('/test')
+# Status route
+@app.route('/status')
 @cross_origin()
-def test():
+def status():
 
-    response = {'response': 200}
+    '''
+        Returns a dictionary with BE server and DB connectivity statuses
+    '''
+
+    db_status = get_db_status()
+
+    response = {
+        'server': 'OK',
+        'database': db_status
+    }
+
+    print(response)
 
     return response
