@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Flask - Web App Template</title>
+        <link rel = "stylesheet" href = "{{ url_for('static', filename = 'css/style.css') }}">
+        <script src = "../static/js/script.js"></script>
+    </head>
+
+    <body>
+        <nav class = "navbar">
+            <div class="navbar-logo">
+                <h1>Flask - Web App Template</h1>
+            </div>
+            <div class = "navbar-links">
+                <a href = "/">Home</a>
+                <a href = "/about">About</a>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+</html>
