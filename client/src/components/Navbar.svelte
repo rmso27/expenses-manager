@@ -1,1 +1,1 @@
-<a class = "nav-link" href = "/">Test Route to Server</a>
+<a class = "nav-link" href = "/status">Status Page</a>
