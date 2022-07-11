@@ -1,6 +1,6 @@
 <script>
 
-    // Check the status of connectivity with the BE
+    // Check the status of connectivity with the BE (server and database)
     fetch('http://127.0.0.1:5000/status').then((response) => {
         return response.json()
     }).then((result) => {
