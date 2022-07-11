@@ -31,7 +31,7 @@ db_conn_timeout = config['database']['DB_CONN_TIMEOUT']
 # Status route
 @app.route('/status')
 @cross_origin()
-def server_status():
+def test_srv_conn():
 
     '''
         Returns a dictionary with BE server and DB connectivity statuses
