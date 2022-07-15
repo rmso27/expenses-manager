@@ -44,3 +44,18 @@ def test_srv_conn():
     }
 
     return response
+
+# Login route
+@app.route('/authenticate-user', methods = ['POST'])
+@cross_origin()
+def authenticate_user():
+
+    '''
+        Authentication route
+    '''
+
+    username = request.form['username']
+    password = request.form['password']
+
+    print('HERE')
+    print(username)
